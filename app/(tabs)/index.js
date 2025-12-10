@@ -29,30 +29,39 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>My Contacts</Text>
-      <FlatList
-        style={{ marginTop: 16 }}
-        data={items}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.card}>
-            <Text style={styles.word}>{item.text}</Text>
-            <Text style={styles.phoneNumber}>{item.phoneNumber}</Text>
-          </View>
-        )}
-        ListEmptyComponent={
-          <Text style={styles.empty}>No contacts found.</Text>
-        }
-      />
+      <View style={styles.listCard}>
+        <Text style={styles.title}>My Contacts</Text>
+        <FlatList
+          style={{ marginTop: 16 }}
+          data={items}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View style={styles.card}>
+              <Text style={styles.word}>{item.text}</Text>
+              <Text style={styles.phoneNumber}>{item.phoneNumber}</Text>
+            </View>
+          )}
+          ListEmptyComponent={
+            <Text style={styles.empty}>No contacts found.</Text>
+          }
+        />
+      </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    padding: 36,
     paddingTop: 80,
     backgroundColor: "#fffeefff",
+  },
+  listCard: {
+    backgroundColor: "#f7f6e6ff",
+    padding: 16,
+    borderRadius: 12,
+    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+    flex: 1,
   },
   title: { fontSize: 24, fontWeight: "700", marginBottom: 8 },
   empty: { color: "#666", marginTop: 8 },

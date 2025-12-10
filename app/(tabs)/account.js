@@ -13,11 +13,22 @@ export default function Account() {
         backgroundColor: "#fffeefff",
       }}
     >
-      <Text style={{ fontSize: 22, fontWeight: "700", marginBottom: 8 }}>
-        Account
-      </Text>
-      <Text style={{ marginBottom: 12 }}>Signed in as: {user?.email}</Text>
-      <Button title="Sign Out" onPress={signOut} />
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#f7f6e6ff",
+          padding: 24,
+          borderRadius: 12,
+          boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+        }}
+      >
+        <Text style={{ fontSize: 22, fontWeight: "700", marginBottom: 8 }}>
+          Account
+        </Text>
+        <Text style={{ marginBottom: 12 }}>Signed in as: {user?.email}</Text>
+        <Button title="Sign Out" onPress={signOut} />
+      </View>
     </View>
   );
 }
