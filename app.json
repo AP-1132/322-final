@@ -2,6 +2,7 @@
   "expo": {
     "name": "322-final",
     "slug": "322-final",
+    "scheme": "322-final",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,6 +25,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
